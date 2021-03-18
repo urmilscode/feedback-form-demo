@@ -7,7 +7,7 @@ def index():
     return '<h1>Propulsion academy feedback form</h1>'
 
 #variable
-@app.route('/home/<place>')
+@app.route('/home', methods=['GET', 'POST'])
 def home(place):
     return '<h2>You are on the' + place  + 'page!!</h2>'
 
