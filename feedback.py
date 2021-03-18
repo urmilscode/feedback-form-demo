@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -8,8 +8,9 @@ def index():
 
 #variable
 @app.route('/home', methods=['GET', 'POST'])
-def home(place):
-    return '<h2>You are on the' + place  + 'page!!</h2>'
+def home():
+    courses = ['python', 'datascience', 'blockchain']
+    return render_template('example.html', student='propulsion academy. urmil', courses=courses)
 
 if __name__ == '__main__':
     app.run(debug=True) 

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Example Template</title>
+    </head>
+    <body>
+        {% if student %}
+        <h1>The feedback form was given to {{ student }} </h1>
+        {% else %}
+        <h1> This is the example template!!!</h1>
+        {% endif %}
+        
+         <h2>List of propulsion courses </h2>
+        {%for course in courses %}
+         <span>  {{ course }} </span>
+        {% endfor %}
+
+    </body>
+</html>
